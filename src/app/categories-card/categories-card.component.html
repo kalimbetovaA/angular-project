@@ -2,9 +2,9 @@
     <div class="container">
         <h2>{{data.title}}</h2>
         <div class="salons" *ngFor="let salon of data.salons" >
-            <img src="https://zapis.kz/data/pics/salon/pic-11164.jpg?v=1">
+            <img src={{salon.image}}>
             <div>
-                <h3>{{salon}}</h3>
+                <h3>{{salon.salon}}</h3>
                 <p>Салон красоты</p>
             </div>
     </div>
