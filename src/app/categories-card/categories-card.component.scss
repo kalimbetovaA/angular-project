@@ -1,0 +1,21 @@
+.main{
+    display: block;
+    
+}
+.salons{
+    float:left;
+    width: 23%;
+}
+
+.salons img{
+    width: 150px
+}
+.container{
+    display: flow-root;
+    margin: 0 auto;
+    max-width: 1140px;
+    border: 1px solid grey;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 15px;
+}
