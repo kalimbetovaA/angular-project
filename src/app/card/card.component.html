@@ -1,0 +1,10 @@
+<div class="salons"  *ngFor="let salon of result">
+    <img src={{salon.image}}>
+    <div>
+      <a [routerLink]="['/salon', salon.id]">
+          <h4>{{salon.salon}}</h4>
+      </a>
+      <p>{{salon.type}}</p>
+      <p>Address</p>
+    </div>
+</div>

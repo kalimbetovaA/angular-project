@@ -1,0 +1,27 @@
+.main{
+  display: block;
+}
+.container{
+  display: block;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+.container img {
+  width: 45%;
+  display: inline-block;
+  margin: 50px;
+  border-radius: 20px;
+}
+.container .info {
+  margin-top: 100px;
+  float: left;
+  width: 40%;
+  display: inline-block;
+  text-align: center;
+}
+p{
+  color: #c2c2c2;
+}
+h4, p{
+  font-size: 19px;
+}
