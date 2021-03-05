@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { ServicesComponent } from './services/services.component';
 import { SalonComponent } from './salon/salon.component';
+import {ToUsdPipe} from './pipes/to-usd.pipe.';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SalonComponent } from './salon/salon.component';
     HomeComponent,
     CardComponent,
     ServicesComponent,
-    SalonComponent
+    SalonComponent,
+    ToUsdPipe
   ],
   imports: [
     BrowserModule,

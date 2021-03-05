@@ -10,6 +10,11 @@ export class SalonComponent implements OnInit {
 
   constructor(private activatedRouter: ActivatedRoute) { }
 
+  openHours: Date[] = [new Date(0, 0, 0, 10, 0, 0, 0), new Date(0, 0, 0, 23, 0, 0, 0)];
+
+  now: Date  = new Date();
+  hours: number = this.now.getHours();
+
   @Input() salon: any;
 
   salons = [
@@ -18,30 +23,36 @@ export class SalonComponent implements OnInit {
       image: 'https://zapis.kz/data/pics/salon/pic-11164.jpg?v=1',
       salon: 'Hikari Lazer',
       type: 'Салон красоты',
-      service: ['Удаление волос', 'Уход за телом', 'Косметология', 'Тату и пирсинг']
+      service: ['Удаление волос', 'Уход за телом', 'Косметология', 'Тату и пирсинг'],
+      rating: 5.0,
+      averagePrice: 13000
     },
     {
       id: '2',
       image: 'https://zapis.kz/data/pics/salon/pic-971.jpg?v=1',
       salon: 'Barbershop Klaus',
       type: 'Barbershop',
-      service: ['Парикмахерские услуги', 'Тату и пирсинг']
-
+      service: ['Парикмахерские услуги', 'Тату и пирсинг'],
+      rating: 4.8,
+      averagePrice: 10000
     },
     {
       id: '3',
       image: 'https://zapis.kz/data/pics/salon/pic-38244.jpg?v=0',
       salon: 'Lilu',
       type: 'Салон красоты',
-      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос', 'Уход за телом', 'Макияж', 'Косметология']
-
+      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос', 'Уход за телом', 'Макияж', 'Косметология'],
+      rating: 4.6,
+      averagePrice: 12000
     },
     {
       id: '4',
       image: 'https://zapis.kz/data/pics/salon/pic-26851.jpg?v=1',
       salon: 'SASS AFD Plaza',
       type: 'Салон красоты',
-      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос', 'Уход за телом', 'Макияж', 'Косметология']
+      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос', 'Уход за телом', 'Макияж', 'Косметология'],
+      rating: 5.0,
+      averagePrice: 15000
 
     },
     {
@@ -49,30 +60,36 @@ export class SalonComponent implements OnInit {
       image: 'https://zapis.kz/data/pics/salon/pic-11164.jpg?v=1',
       salon: 'Dermalogica',
       type: 'Салон красоты',
-      service: [ 'Ногтевой сервис', 'Удаление волос', 'Уход за телом', 'Косметология']
-
-
+      service: [ 'Ногтевой сервис', 'Удаление волос', 'Уход за телом', 'Косметология'],
+      rating: 4.9,
+      averagePrice: 11000
     },
     {
       id: '6',
       image: 'https://zapis.kz/data/pics/salon/pic-18978.jpg?v=0',
       salon: 'Main beauty and design',
       type: 'Студия красоты',
-      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос', 'Макияж']
+      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос', 'Макияж'],
+      rating: 4.7,
+      averagePrice: 7000
     },
     {
       id: '7',
       image: 'https://zapis.kz/data/pics/salon/pic-18011.jpg?v=1',
       salon: 'Chocolate',
       type: 'Салон красоты',
-      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос', 'Уход за телом', 'Макияж', 'Косметология', 'Тату и пирсинг']
+      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос', 'Уход за телом', 'Макияж', 'Косметология', 'Тату и пирсинг'],
+      rating: 5.0,
+      averagePrice: 12000
     },
     {
       id: '8',
       image: 'https://zapis.kz/data/pics/salon/pic-25791.jpg?v=1',
       salon: 'Aiya_Eyebrows',
       type: 'Студия красоты',
-      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос',  'Тату и пирсинг']
+      service: ['Брови', 'Парикмахерские услуги', 'Ногтевой сервис', 'Удаление волос',  'Тату и пирсинг'],
+      rating: 4.5,
+      averagePrice: 5000
     }
   ];
 

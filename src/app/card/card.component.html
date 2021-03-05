@@ -4,7 +4,13 @@
       <a [routerLink]="['/salon', salon.id]">
           <h4>{{salon.salon}}</h4>
       </a>
-      <p>{{salon.type}}</p>
+      <p>{{salon.type | titlecase}}</p>
+      <p class="rating">
+        <span [ngClass]="{'high':salon.rating >=4.8,'low':salon.rating < 4.8}">
+          {{salon.rating | number:'1.1-1'}}
+          &#9733;
+        </span>
+        </p>
       <p>Address</p>
     </div>
 </div>

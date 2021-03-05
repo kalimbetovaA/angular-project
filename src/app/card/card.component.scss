@@ -21,3 +21,15 @@ p{
   font-size: 13px;
   color: #c2c2c2;
 }
+.rating{
+  line-height: 17px;
+  height: 17px;
+  font-weight: 500;
+  color: #ffd315;
+}
+.rating .high{
+  color: #ffd315;
+}
+.rating .low{
+  color: #e6d06d;
+}

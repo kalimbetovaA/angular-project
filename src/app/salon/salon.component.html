@@ -1,9 +1,36 @@
 <div class="main">
   <div class="container" >
     <div class="info">
-      <h4>{{salon.salon}}</h4>
-      <p>{{salon.type}}</p>
-      <p>Address</p>
+      <div class="salon_info">
+        <h4>{{salon.salon}}</h4>
+        <span class="rating">
+          <span [ngClass]="{'high':salon.rating >=4.8,'low':salon.rating < 4.8}">
+            {{salon.rating | number:'1.1-1'}}
+            &#9733;
+          </span>
+        </span>
+        <p>{{salon.type | titlecase}} </p>
+      </div>
+      <div class="about">
+        <h3>О нас</h3>
+        <p>
+          Средняя цена услуг: <b>{{salon.averagePrice | currency:'KZT':'symbol-narrow'}},
+          {{salon.averagePrice | toUSD |currency:'USD':'symbol-narrow'}}</b>
+        </p>
+        <p>
+          Работаем:
+          <b>{{openHours[0] | date: 'HH:mm'}} - {{openHours[1] | date: 'HH:mm'}}</b>
+        </p>
+        <p *ngIf="hours>openHours[0].getHours() && hours<openHours[1].getHours(); else elseBlock" class="open">
+          Открыто
+        </p>
+        <ng-template #elseBlock>
+          <p class="close">Закрыто</p>
+        </ng-template>
+        <p>+7 (701) 190-09-93</p>
+        <p>пр.Аль-Фараби 7 БЦ "Нурлы тау" блок 5А, эт.2 каб.109</p>
+      </div>
+      <button>Записаться</button>
     </div>
     <img src={{salon.image}}>
   </div>
