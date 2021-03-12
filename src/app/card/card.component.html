@@ -1,5 +1,5 @@
 <div class="salons"  *ngFor="let salon of result">
-    <img src={{salon.image}}>
+    <img src={{salon.imageURL}}>
     <div>
       <a [routerLink]="['/salon', salon.id]">
           <h4>{{salon.salon}}</h4>

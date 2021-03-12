@@ -12,6 +12,10 @@ import { CardComponent } from './card/card.component';
 import { ServicesComponent } from './services/services.component';
 import { SalonComponent } from './salon/salon.component';
 import {ToUsdPipe} from './pipes/to-usd.pipe.';
+import {SalonService} from './angularServices/salon.service';
+import {LoggingService} from './angularServices/logging.service';
+import {SalonServicesService} from './angularServices/salon-services.service';
+import {CategoryService} from "./angularServices/category.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +33,7 @@ import {ToUsdPipe} from './pipes/to-usd.pipe.';
     BrowserModule,
     RouterModule.forRoot(routes, {useHash: true})
   ],
-  providers: [],
+  providers: [SalonService, LoggingService, CategoryService, SalonServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
