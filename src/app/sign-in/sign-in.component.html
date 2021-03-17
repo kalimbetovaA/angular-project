@@ -1,0 +1,20 @@
+<main>
+  <form>
+    <h1>Вход</h1>
+    <p class="info">Привет, рады видеть Вас снова</p>
+    <div class="in-field">
+      <label>Телефон *</label>
+      <div><input requiredmessage="Заполните поле телефона" placeholder="8 (***) *******" prefix="8"
+                  mask="(000) 000-00-00">
+      </div>
+    </div>
+    <div class="in-field">
+      <label>Пароль *</label>
+      <div>
+        <input requiredmessage="Заполните поле пароля" placeholder="Введите пароль" type="password"></div>
+    </div>
+
+    <button class="submit">Войти</button>
+    <div> Впервые на zapis.kz? <a [routerLink]="['sign-up']" >Регистрация</a></div>
+  </form>
+</main>

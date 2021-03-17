@@ -1,0 +1,31 @@
+<main>
+  <form>
+    <h1>Регистрация</h1>
+    <div class="in-field">
+      <label>Имя *</label>
+      <div>
+        <input type="text" requiredmessage="Заполните поле имени" placeholder="Введите имя"></div>
+    </div>
+    <div class="in-field">
+      <label>Пароль *</label>
+      <div>
+        <input requiredmessage="Заполните поле пароля" placeholder="Введите пароль" type="password"></div>
+    </div>
+    <div class="in-field">
+      <label>Повторите пароль*</label>
+      <div>
+        <input requiredmessage="Заполните поле повторного пароля" placeholder="Повторите пароль" type="password">
+      </div>
+    </div>
+      <div class="in-field">
+        <label>Телефон *</label>
+        <div><input requiredmessage="Заполните поле телефона" placeholder="8 (***) *******" prefix="8"
+                    mask="(000) 000-00-00">
+        </div>
+      </div>
+      <p class="info"> Введите свой номер телефона. Науказанный номер будет отправлено SMS с кодом.</p>
+      <button class="submit">Подтвердить</button>
+      <button class="submit disabled" value="Регистрация" type="submit">Регистрация</button>
+      <div> Уже есть аккаунт? <a [routerLink]="['sign-in']">Войти</a></div>
+  </form>
+</main>

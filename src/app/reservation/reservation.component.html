@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="container" >
+    <div class="title">
+      <h2>{{salon.salon}}</h2>
+      <span>{{salon.type | titlecase}}</span>
+    </div>
+
+      <label>Выберите услугу</label>
+      <select [(ngModel)]="selectedService">
+        <option *ngFor="let serviceDetail of serviceDetails" [ngValue]="serviceDetail">{{serviceDetail.name}}({{serviceDetail.price}} т)</option>
+      </select>
+      <form *ngIf="selectedService != null">
+        <label>Выберите дату</label>
+        <input type="date" [(ngModel)]="date">
+        <label>Выберите время</label>
+        <input type="time" [(ngModel)]="time">
+        <label>Контактные данные</label>
+
+        <div class="contacts">
+          <input placeholder="Имя и Фамилия*" type="text" [(ngModel)]="fullName">
+        </div>
+        <div class="contacts">
+          <input placeholder="Телефон*" type="tel" [(ngModel)]="tel">
+        </div>
+
+        <input placeholder="Оставьте свой комментарий" type="text" [(ngModel)]="comment">
+        <button>Записаться</button>
+      </form>
+
+  </div>
+</div>

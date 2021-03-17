@@ -92,5 +92,9 @@ export class SalonService {
     return this.salonList;
   }
 
+  getSalon(id: string | null): any {
+    return this.salonList.find(x => x.id === id);
+  }
+
 }
 

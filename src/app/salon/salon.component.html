@@ -30,7 +30,9 @@
         <p>+7 (701) 190-09-93</p>
         <p>пр.Аль-Фараби 7 БЦ "Нурлы тау" блок 5А, эт.2 каб.109</p>
       </div>
-      <button>Записаться</button>
+      <a [routerLink]="['/reservation', salon.id]">
+        <button>Записаться</button>
+      </a>
     </div>
     <img src={{salon.imageURL}}>
   </div>

@@ -16,6 +16,11 @@ import {SalonService} from './angularServices/salon.service';
 import {LoggingService} from './angularServices/logging.service';
 import {SalonServicesService} from './angularServices/salon-services.service';
 import {CategoryService} from "./angularServices/category.service";
+import { ReservationComponent } from './reservation/reservation.component';
+import {ServiceDetailsService} from "./angularServices/serviceDetails.service";
+import {FormsModule} from "@angular/forms";
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +32,17 @@ import {CategoryService} from "./angularServices/category.service";
     CardComponent,
     ServicesComponent,
     SalonComponent,
-    ToUsdPipe
+    ToUsdPipe,
+    ReservationComponent,
+    SignUpComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes, {useHash: true}),
+    FormsModule
   ],
-  providers: [SalonService, LoggingService, CategoryService, SalonServicesService],
+  providers: [SalonService, LoggingService, CategoryService, SalonServicesService, ServiceDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
