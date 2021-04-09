@@ -9,22 +9,22 @@
       <select [(ngModel)]="selectedService">
         <option *ngFor="let serviceDetail of serviceDetails" [ngValue]="serviceDetail">{{serviceDetail.name}}({{serviceDetail.price}} т)</option>
       </select>
-      <form *ngIf="selectedService != null">
+      <form *ngIf="selectedService != null" (ngSubmit)="onFormSubmit()">
         <label>Выберите дату</label>
-        <input type="date" [(ngModel)]="date">
+        <input type="date" [(ngModel)]="date" name="date">
         <label>Выберите время</label>
-        <input type="time" [(ngModel)]="time">
+        <input type="time" [(ngModel)]="time" name="time">
         <label>Контактные данные</label>
 
         <div class="contacts">
-          <input placeholder="Имя и Фамилия*" type="text" [(ngModel)]="fullName">
+          <input placeholder="Имя и Фамилия*" type="text" [(ngModel)]="fullName" name="fullName">
         </div>
         <div class="contacts">
-          <input placeholder="Телефон*" type="tel" [(ngModel)]="tel">
+          <input placeholder="Телефон*" type="tel" [(ngModel)]="tel" name="tel">
         </div>
 
-        <input placeholder="Оставьте свой комментарий" type="text" [(ngModel)]="comment">
-        <button>Записаться</button>
+        <input placeholder="Оставьте свой комментарий" type="text" [(ngModel)]="comment" name="comment">
+        <input class="button" type="submit" name="button" value="Записаться">
       </form>
 
   </div>

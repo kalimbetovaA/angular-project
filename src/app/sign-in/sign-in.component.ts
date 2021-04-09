@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
+import {AuthService} from '../angularServices/auth.service';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -8,7 +10,17 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class SignInComponent implements OnInit {
 
-  constructor(private activatedRouter: ActivatedRoute) { }
+  constructor(private authService: AuthService, private router: Router, private activatedRouter: ActivatedRoute) { }
+
+  tel!: string;
+  password!: string;
+
+
+  onFormSubmit(): void {
+    if (this.authService.isUserAuthenticated(this.tel, this.password)){
+      this.router.navigate(['profile']);
+    }
+  }
 
   ngOnInit(): void {
     this.activatedRouter.paramMap.subscribe(params => {

@@ -21,6 +21,11 @@ import {ServiceDetailsService} from "./angularServices/serviceDetails.service";
 import {FormsModule} from "@angular/forms";
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import {ReserviationGuardService} from "./guard/reserviation-guard.service";
+import { ProfileComponent } from './profile/profile.component';
+import {AuthGuardService} from "./guard/auth-guard.service";
+import {AuthService} from "./angularServices/auth.service";
+import { ReserveDataComponent } from './profile/reserve-data/reserve-data.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +40,16 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ToUsdPipe,
     ReservationComponent,
     SignUpComponent,
-    SignInComponent
+    SignInComponent,
+    ProfileComponent,
+    ReserveDataComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, {useHash: true}),
     FormsModule
   ],
-  providers: [SalonService, LoggingService, CategoryService, SalonServicesService, ServiceDetailsService],
+  providers: [SalonService, LoggingService, CategoryService, SalonServicesService, ServiceDetailsService, ReserviationGuardService, AuthGuardService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

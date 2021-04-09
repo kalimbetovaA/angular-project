@@ -3,7 +3,8 @@ import {ServiceDetails} from '../serviceDetails';
 import {SalonService} from '../angularServices/salon.service';
 import {ActivatedRoute} from '@angular/router';
 import {ServiceDetailsService} from '../angularServices/serviceDetails.service';
-import {Time} from "@angular/common";
+import {Time} from '@angular/common';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-reservation',
@@ -11,6 +12,8 @@ import {Time} from "@angular/common";
   styleUrls: ['./reservation.component.scss']
 })
 export class ReservationComponent implements OnInit {
+
+  isSubmitted = false;
 
   salon: any;
   serviceDetails: ServiceDetails[] | undefined;
@@ -21,9 +24,15 @@ export class ReservationComponent implements OnInit {
   tel: string | undefined;
   comment: string | undefined;
 
+  onFormSubmit(): void {
+    this.isSubmitted = true;
+  }
+
   constructor(private serviceDetailsService: ServiceDetailsService,
               private salonService: SalonService,
               private activatedRouter: ActivatedRoute) { }
+
+
 
   ngOnInit(): void {
     this.activatedRouter.paramMap.subscribe(params => {
@@ -35,6 +44,13 @@ export class ReservationComponent implements OnInit {
       console.log('******query params: ', queryParams);
     });
 
+  }
+
+  canDeactivate(): Observable<boolean> | boolean {
+    if (!this.isSubmitted) {
+      return confirm('Discard unsaved data?');
+    }
+    return true;
   }
 
 }
