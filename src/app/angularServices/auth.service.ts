@@ -8,7 +8,7 @@ export class AuthService {
   private loggedInUser: User | undefined;
   users = [
     new User(1, '8 (707) 7067673', 'araypass', 'Aray'),
-    new User(1, '8 (707) 7777777', 'pass', 'Some User')
+    new User(2, '8 (707) 7777777', 'pass', 'Some User')
   ];
 
   getAllUsers(): User[] {

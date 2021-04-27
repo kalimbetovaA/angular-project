@@ -1,0 +1,597 @@
+{
+  "users": [
+    {
+      "userId": 1,
+      "tel": "8 (707) 7067673",
+      "password": "araypass",
+      "username": "Aray"
+    },
+    {
+      "userId": 2,
+      "tel": "8 (707) 7777777",
+      "password": "pass",
+      "username": "Some User"
+    }
+  ],
+  "categories" : [
+    {
+      "title": "Лучшее от Zapis.kz",
+      "salons": [
+      {
+        "id": "1",
+        "imageURL": "https://zapis.kz/data/pics/salon/pic-11164.jpg?v=1",
+        "salon": "Hikari Lazer",
+        "type": "Салон красоты",
+        "service": [
+          "Удаление волос",
+          "Уход за телом",
+          "Косметология",
+          "Тату и пирсинг"
+        ],
+        "rating": 5.0,
+        "averagePrice": 13000,
+        "openHours": [
+          "1970-01-01T10:00:00.000Z",
+          "1970-01-01T23:00:00.000Z"
+        ],
+        "category": "Лучшее от Zapis.kz"
+      },
+      {
+        "id": "2",
+        "imageURL": "https://zapis.kz/data/pics/salon/pic-971.jpg?v=1",
+        "salon": "Barbershop Klaus",
+        "type": "Barbershop",
+        "service": [
+          "Парикмахерские услуги",
+          "Тату и пирсинг"
+        ],
+        "rating": 4.8,
+        "averagePrice": 10000,
+        "openHours": [
+          "1970-01-01T10:00:00.000Z",
+          "1970-01-01T23:00:00.000Z"
+        ],
+        "category": "Лучшее от Zapis.kz"
+      },
+      {
+        "id": "3",
+        "imageURL": "https://zapis.kz/data/pics/salon/pic-38244.jpg?v=0",
+        "salon": "Lilu",
+        "type": "Салон красоты",
+        "service": [
+          "Брови",
+          "Парикмахерские услуги",
+          "Ногтевой сервис",
+          "Удаление волос",
+          "Уход за телом",
+          "Косметология",
+          "Макияж"
+        ],
+        "rating": 4.6,
+        "averagePrice": 12000,
+        "openHours": [
+          "1970-01-01T10:00:00.000Z",
+          "1970-01-01T23:00:00.000Z"
+        ],
+        "category": "Лучшее от Zapis.kz"
+      },
+      {
+        "id": "4",
+        "imageURL": "https://zapis.kz/data/pics/salon/pic-26851.jpg?v=1",
+        "salon": "SASS AFD Plaza",
+        "type": "Салон красоты",
+        "service": [
+          "Брови",
+          "Парикмахерские услуги",
+          "Ногтевой сервис",
+          "Удаление волос",
+          "Уход за телом",
+          "Косметология",
+          "Макияж"
+        ],
+        "rating": 5.0,
+        "averagePrice": 15000,
+        "openHours": [
+          "1970-01-01T10:00:00.000Z",
+          "1970-01-01T23:00:00.000Z"
+        ],
+        "category": "Лучшее от Zapis.kz"
+      }
+        ]
+    },
+    {
+      "title": "Салоны с кэшбеком",
+      "salons": [
+        {
+          "id": "5",
+          "imageURL": "https://zapis.kz/data/pics/salon/pic-11164.jpg?v=1",
+          "salon": "Dermalogica",
+          "type": "Салон красоты",
+          "service": [
+            "Ногтевой сервис",
+            "Удаление волос",
+            "Уход за телом",
+            "Косметология",
+            "Макияж"
+          ],
+          "rating": 4.9,
+          "averagePrice": 11000,
+          "openHours": [
+            "1970-01-01T10:00:00.000Z",
+            "1970-01-01T23:00:00.000Z"
+          ],
+          "category": "Салоны с кэшбеком"
+        },
+        {
+          "id": "6",
+          "imageURL": "https://zapis.kz/data/pics/salon/pic-18978.jpg?v=0",
+          "salon": "Main beauty and design",
+          "type": "Салон красоты",
+          "service": [
+            "Брови",
+            "Парикмахерские услуги",
+            "Ногтевой сервис",
+            "Удаление волос",
+            "Макияж"
+          ],
+          "rating": 4.7,
+          "averagePrice": 7000,
+          "openHours": [
+            "1970-01-01T10:00:00.000Z",
+            "1970-01-01T23:00:00.000Z"
+          ],
+          "category": "Салоны с кэшбеком"
+        },
+        {
+          "id": "7",
+          "imageURL": "https://zapis.kz/data/pics/salon/pic-18011.jpg?v=1",
+          "salon": "Chocolate",
+          "type": "Салон красоты",
+          "service": [
+            "Брови",
+            "Парикмахерские услуги",
+            "Ногтевой сервис",
+            "Удаление волос",
+            "Уход за телом",
+            "Косметология",
+            "Макияж",
+            "Тату и пирсинг"
+          ],
+          "rating": 5.0,
+          "averagePrice": 12000,
+          "openHours": [
+            "1970-01-01T10:00:00.000Z",
+            "1970-01-01T23:00:00.000Z"
+          ],
+          "category": "Салоны с кэшбеком"
+        },
+        {
+          "id": "8",
+          "imageURL": "https://zapis.kz/data/pics/salon/pic-25791.jpg?v=1",
+          "salon": "Aiya_Eyebrows",
+          "type": "Студия красоты",
+          "service": [
+            "Брови",
+            "Парикмахерские услуги",
+            "Ногтевой сервис",
+            "Удаление волос",
+            "Тату и пирсинг"
+          ],
+          "rating": 4.5,
+          "averagePrice": 5000,
+          "openHours": [
+            "1970-01-01T10:00:00.000Z",
+            "1970-01-01T23:00:00.000Z"
+          ],
+          "category": "Салоны с кэшбеком"
+        }
+      ]
+    }
+  ],
+  "salons": [
+    {
+      "id": "1",
+      "imageURL": "https://zapis.kz/data/pics/salon/pic-11164.jpg?v=1",
+      "salon": "Hikari Lazer",
+      "type": "Салон красоты",
+      "service": [
+        "Удаление волос",
+        "Уход за телом",
+        "Косметология",
+        "Тату и пирсинг"
+      ],
+      "rating": 5.0,
+      "averagePrice": 13000,
+      "openHours": [
+        "1970-01-01T10:00:00.000Z",
+        "1970-01-01T23:00:00.000Z"
+      ],
+      "category": "Лучшее от Zapis.kz"
+    },
+    {
+      "id": "2",
+      "imageURL": "https://zapis.kz/data/pics/salon/pic-971.jpg?v=1",
+      "salon": "Barbershop Klaus",
+      "type": "Barbershop",
+      "service": [
+        "Парикмахерские услуги",
+        "Тату и пирсинг"
+      ],
+      "rating": 4.8,
+      "averagePrice": 10000,
+      "openHours": [
+        "1970-01-01T10:00:00.000Z",
+        "1970-01-01T23:00:00.000Z"
+      ],
+      "category": "Лучшее от Zapis.kz"
+    },
+    {
+      "id": "3",
+      "imageURL": "https://zapis.kz/data/pics/salon/pic-38244.jpg?v=0",
+      "salon": "Lilu",
+      "type": "Салон красоты",
+      "service": [
+        "Брови",
+        "Парикмахерские услуги",
+        "Ногтевой сервис",
+        "Удаление волос",
+        "Уход за телом",
+        "Косметология",
+        "Макияж"
+      ],
+      "rating": 4.6,
+      "averagePrice": 12000,
+      "openHours": [
+        "1970-01-01T10:00:00.000Z",
+        "1970-01-01T23:00:00.000Z"
+      ],
+      "category": "Лучшее от Zapis.kz"
+    },
+    {
+      "id": "4",
+      "imageURL": "https://zapis.kz/data/pics/salon/pic-26851.jpg?v=1",
+      "salon": "SASS AFD Plaza",
+      "type": "Салон красоты",
+      "service": [
+        "Брови",
+        "Парикмахерские услуги",
+        "Ногтевой сервис",
+        "Удаление волос",
+        "Уход за телом",
+        "Косметология",
+        "Макияж"
+      ],
+      "rating": 5.0,
+      "averagePrice": 15000,
+      "openHours": [
+        "1970-01-01T10:00:00.000Z",
+        "1970-01-01T23:00:00.000Z"
+      ],
+      "category": "Лучшее от Zapis.kz"
+    },
+    {
+      "id": "5",
+      "imageURL": "https://zapis.kz/data/pics/salon/pic-11164.jpg?v=1",
+      "salon": "Dermalogica",
+      "type": "Салон красоты",
+      "service": [
+        "Ногтевой сервис",
+        "Удаление волос",
+        "Уход за телом",
+        "Косметология",
+        "Макияж"
+      ],
+      "rating": 4.9,
+      "averagePrice": 11000,
+      "openHours": [
+        "1970-01-01T10:00:00.000Z",
+        "1970-01-01T23:00:00.000Z"
+      ],
+      "category": "Салоны с кэшбеком"
+    },
+    {
+      "id": "6",
+      "imageURL": "https://zapis.kz/data/pics/salon/pic-18978.jpg?v=0",
+      "salon": "Main beauty and design",
+      "type": "Салон красоты",
+      "service": [
+        "Брови",
+        "Парикмахерские услуги",
+        "Ногтевой сервис",
+        "Удаление волос",
+        "Макияж"
+      ],
+      "rating": 4.7,
+      "averagePrice": 7000,
+      "openHours": [
+        "1970-01-01T10:00:00.000Z",
+        "1970-01-01T23:00:00.000Z"
+      ],
+      "category": "Салоны с кэшбеком"
+    },
+    {
+      "id": "7",
+      "imageURL": "https://zapis.kz/data/pics/salon/pic-18011.jpg?v=1",
+      "salon": "Chocolate",
+      "type": "Салон красоты",
+      "service": [
+        "Брови",
+        "Парикмахерские услуги",
+        "Ногтевой сервис",
+        "Удаление волос",
+        "Уход за телом",
+        "Косметология",
+        "Макияж",
+        "Тату и пирсинг"
+      ],
+      "rating": 5.0,
+      "averagePrice": 12000,
+      "openHours": [
+        "1970-01-01T10:00:00.000Z",
+        "1970-01-01T23:00:00.000Z"
+      ],
+      "category": "Салоны с кэшбеком"
+    },
+    {
+      "id": "8",
+      "imageURL": "https://zapis.kz/data/pics/salon/pic-25791.jpg?v=1",
+      "salon": "Aiya_Eyebrows",
+      "type": "Студия красоты",
+      "service": [
+        "Брови",
+        "Парикмахерские услуги",
+        "Ногтевой сервис",
+        "Удаление волос",
+        "Тату и пирсинг"
+      ],
+      "rating": 4.5,
+      "averagePrice": 5000,
+      "openHours": [
+        "1970-01-01T10:00:00.000Z",
+        "1970-01-01T23:00:00.000Z"
+      ],
+      "category": "Салоны с кэшбеком"
+    }
+  ],
+  "salonServices": [
+    {
+      "id": "1",
+      "name": "Парикмахерские услуги"
+    },
+    {
+      "id": "2",
+      "name": "Ногтевой сервис"
+    },
+    {
+      "id": "3",
+      "name": "Брови"
+    },
+    {
+      "id": "4",
+      "name": "Удаление волос"
+    },
+    {
+      "id": "5",
+      "name": "Уход за телом"
+    },
+    {
+      "id": "6",
+      "name": "Макияж"
+    },
+    {
+      "id": "7",
+      "name": "Косметология"
+    },
+    {
+      "id": "8",
+      "name": "Тату и пирсинг"
+    }
+  ],
+  "salonDetailedServices": [
+    {
+      "salonId": "1",
+      "detailedServicesList": [
+        {
+          "name": "Ламинирование бровей",
+          "price": 6000,
+          "master": "Жулдыз"
+        },
+        {
+          "name": "Наращивание ресниц",
+          "price": 8000,
+          "master": "Алина"
+        },
+        {
+          "name": "Маникюр",
+          "price": 5000,
+          "master": "Юлия"
+        },
+        {
+          "name": "Педикюр",
+          "price": 7000,
+          "master": "Юлия"
+        },
+        {
+          "name": "Коррекция ресниц",
+          "price": 5000,
+          "master": "Асель"
+        }
+      ]
+    },
+    {
+      "salonId": "2",
+      "detailedServicesList": [
+        {
+          "name": "Укладка",
+          "price": 1000,
+          "master": "Камиль"
+        },
+        {
+          "name": "Стрижка мужская",
+          "price": 5000,
+          "master": "Темирлан"
+        },
+        {
+          "name": "Коррекция бороды",
+          "price": 2500,
+          "master": "Рамир"
+        },
+        {
+          "name": "Стрижка детская",
+          "price": 3000,
+          "master": "Сергей"
+        }
+      ]
+    },
+    {
+      "salonId": "3",
+      "detailedServicesList": [
+        {
+          "name": "Ламинирование бровей",
+          "price": 5000,
+          "master": "Айдын"
+        },
+        {
+          "name": "Наращивание ресниц",
+          "price": 5000,
+          "master": "Катерина"
+        },
+        {
+          "name": "Маникюр",
+          "price": 4000,
+          "master": "Анель"
+        },
+        {
+          "name": "Педикюр",
+          "price": 6000,
+          "master": "Ирина"
+        }
+      ]
+    },
+    {
+      "salonId": "4",
+      "detailedServicesList": [
+        {
+          "name": "Наращивание ресниц",
+          "price": 9000,
+          "master": "Альбина"
+        },
+        {
+          "name": "Маникюр + гель покрытие + снятие",
+          "price": 7000,
+          "master": "Ляззат"
+        },
+        {
+          "name": "Педикюр",
+          "price": 7000,
+          "master": "Ирина"
+        },
+        {
+          "name": "Коррекция ресниц",
+          "price": 5000,
+          "master": "Асель"
+        }
+      ]
+    },
+    {
+      "salonId": "5",
+      "detailedServicesList": [
+        {
+          "name": "Ламинирование бровей",
+          "price": 15000,
+          "master": "Айдана"
+        },
+        {
+          "name": "Коррекция бровей",
+          "price": 5000,
+          "master": "Айдын"
+        },
+        {
+          "name": "Массаж лица",
+          "price": 16000,
+          "master": "Зарина"
+        },
+        {
+          "name": "Face Fit",
+          "price": 10000,
+          "master": "Ирина"
+        }
+      ]
+    },
+    {
+      "salonId": "6",
+      "detailedServicesList": [
+        {
+          "name": "Ламинирование бровей",
+          "price": 9000,
+          "master": "Асель"
+        },
+        {
+          "name": "Укладка",
+          "price": 16000,
+          "master": "Зарина"
+        },
+        {
+          "name": "Маникюр",
+          "price": 4000,
+          "master": "Анель"
+        },
+        {
+          "name": "Педикюр",
+          "price": 6000,
+          "master": "Катерина"
+        }
+      ]
+    },
+    {
+      "salonId": "7",
+      "detailedServicesList": [
+        {
+          "name": "Коррекция бровей",
+          "price": 5000,
+          "master": "Айгерим"
+        },
+        {
+          "name": "Укладка",
+          "price": 16000,
+          "master": "Камила"
+        },
+        {
+          "name": "Маникюр",
+          "price": 5000,
+          "master": "Аида"
+        },
+        {
+          "name": "Педикюр",
+          "price": 7500,
+          "master": "Катерина"
+        }
+      ]
+    },
+    {
+      "salonId": "8",
+      "detailedServicesList": [
+        {
+          "name": "Маникюр",
+          "price": 4000,
+          "master": "Анель"
+        },
+        {
+          "name": "Ламинирование бровей",
+          "price": 5000,
+          "master": "Айдын"
+        },
+        {
+          "name": "Наращивание ресниц",
+          "price": 5000,
+          "master": "Камила"
+        },
+        {
+          "name": "Педикюр",
+          "price": 6000,
+          "master": "Айгерим"
+        }
+      ]
+    }
+  ]
+}

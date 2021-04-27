@@ -26,6 +26,7 @@ import { ProfileComponent } from './profile/profile.component';
 import {AuthGuardService} from "./guard/auth-guard.service";
 import {AuthService} from "./angularServices/auth.service";
 import { ReserveDataComponent } from './profile/reserve-data/reserve-data.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ReserveDataComponent } from './profile/reserve-data/reserve-data.compon
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, {useHash: true}),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [SalonService, LoggingService, CategoryService, SalonServicesService, ServiceDetailsService, ReserviationGuardService, AuthGuardService, AuthService],
   bootstrap: [AppComponent]

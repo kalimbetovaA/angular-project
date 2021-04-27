@@ -1,24 +1,20 @@
 import { Injectable } from '@angular/core';
 import {Category} from '../category';
-import {SalonService} from './salon.service';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 import {Salon} from '../salon';
 
 
 @Injectable()
 export class CategoryService {
-  categoriesData = [
-    new Category('Лучшее от Zapis.kz', this.getSalonServices('Лучшее от Zapis.kz')),
-    new Category('Салоны с кэшбеком', this.getSalonServices('Салоны с кэшбеком'))
-  ];
 
-  constructor(private salonService: SalonService) { }
+  baseURL = 'http://localhost:3000';
 
-  getCategoriesData(): Category[]{
-    return this.categoriesData;
-  }
+  constructor(private http: HttpClient) {}
 
-  getSalonServices(category: string): Salon[] | undefined{
-    return this.salonService.getSalonList().filter(x => x.category === category);
+
+  getCategoriesData(): Observable<Category[]>{
+    return this.http.get<Category[]>(this.baseURL + `/categories`);
   }
 
 }

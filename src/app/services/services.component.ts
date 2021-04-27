@@ -29,17 +29,20 @@ export class ServicesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRouter.paramMap.subscribe(params => {
-      this.salons = this.salonService.getSalonList();
-      this.salonServices = this.salonServicesService.getSalonServices();
-      console.log('activatedRouter.params: ', params);
-      this.getService(params.get('id'));
-    });
-    this.result = this.salons.filter(s => s.service.includes(this.service.name));
+    this.salonService.getSalonList()
+      .subscribe((data) => {
+        this.salons = data,
+          this.activatedRouter.paramMap.subscribe(params => {
+            this.salonServicesService.getSalonServices()
+              .subscribe(salonServices => {
+                this.salonServices = salonServices;
+                this.getService(params.get('id'));
+                this.result = this.salons.filter(s => s.service.includes(this.service.name));
 
-    this.loggingService.log('The user went to the \'' + this.service.name + '\' service page');
+              });
+          });
+      });
+
+
   }
-
-
-
 }

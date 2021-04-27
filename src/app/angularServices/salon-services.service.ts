@@ -1,25 +1,19 @@
 import { Injectable } from '@angular/core';
 import {SalonServiceData} from '../salonServiceData';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 
 @Injectable()
 export class SalonServicesService {
-  salonServiceList = [
-    new SalonServiceData('1', 'Парикмахерские услуги'),
-    new SalonServiceData('1', 'Парикмахерские услуги'),
-    new SalonServiceData('2', 'Ногтевой сервис'),
-    new SalonServiceData('3', 'Брови'),
-    new SalonServiceData('4', 'Удаление волос'),
-    new SalonServiceData('5', 'Уход за телом'),
-    new SalonServiceData('6', 'Макияж'),
-    new SalonServiceData('7', 'Косметология'),
-    new SalonServiceData('8', 'Тату и пирсинг')
-  ];
+  baseURL = 'http://localhost:3000';
+
+  constructor(private http: HttpClient) {}
 
 
 
-  getSalonServices(): SalonServiceData[]{
-    return this.salonServiceList;
+  getSalonServices(): Observable<SalonServiceData[]>{
+    return this.http.get<SalonServiceData[]>(this.baseURL + `/salonServices`);
   }
 
 }
