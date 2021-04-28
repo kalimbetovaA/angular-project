@@ -1,19 +1,23 @@
 import {Injectable} from '@angular/core';
 import {User} from '../user';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {Category} from "../category";
 
 @Injectable()
 export class AuthService {
   private loginUrl = 'sign-in';
   private isloggedIn = false;
   private loggedInUser: User | undefined;
-  users = [
-    new User(1, '8 (707) 7067673', 'araypass', 'Aray'),
-    new User(2, '8 (707) 7777777', 'pass', 'Some User')
-  ];
+  baseURL = 'http://localhost:3000';
+  users!: User[];
 
-  getAllUsers(): User[] {
-    return this.users;
+  constructor(private http: HttpClient) {
+    this.http.get<any[]>(this.baseURL + `/users`).subscribe(data => {
+      this.users = data; });
   }
+
+
   isUserAuthenticated(tel: string, password: string): boolean {
         this.loggedInUser = this.users.find(user => (user.tel === tel) && (user.password === password));
         if (this.loggedInUser === undefined) {

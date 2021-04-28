@@ -2,14 +2,14 @@
   "users": [
     {
       "userId": 1,
-      "tel": "8 (707) 7067673",
-      "password": "araypass",
+      "tel": "7(707)706-76-73",
+      "password": "Araypass1",
       "username": "Aray"
     },
     {
       "userId": 2,
-      "tel": "8 (707) 7777777",
-      "password": "pass",
+      "tel": "7(707)777-77-77",
+      "password": "Pass456w",
       "username": "Some User"
     }
   ],

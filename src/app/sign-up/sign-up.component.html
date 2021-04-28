@@ -1,26 +1,82 @@
 <main>
-  <form>
+  <form #form="ngForm" (ngSubmit)="onFormSubmit()">
     <h1>Регистрация</h1>
     <div class="in-field">
       <label>Имя *</label>
       <div>
-        <input type="text" requiredmessage="Заполните поле имени" placeholder="Введите имя"></div>
+        <input type="text" requiredmessage="Заполните поле имени" placeholder="Введите имя"
+               minlength="4"
+               maxLength="15"
+               pattern="^[a-zA-Z]+$"
+               name="firstname" [(ngModel)]="user.username" required #username="ngModel">
+      </div>
+      <div [style.color]="'red'" *ngIf="!username?.valid
+                && (username?.dirty || username?.touched)">
+          Неверно указано Имя
+        <div *ngIf="username?.errors?.required">
+          Поле Имя должен быть заполнен
+        </div>
+        <div *ngIf="username?.errors?.minlength">
+          Минимальная длина {{username?.errors?.minlength?.requiredLength}}
+        </div>
+        <div *ngIf="username?.errors?.pattern">
+          Имя должно содержать только латиницу
+        </div>
+      </div>
     </div>
     <div class="in-field">
       <label>Пароль *</label>
       <div>
-        <input requiredmessage="Заполните поле пароля" placeholder="Введите пароль" type="password"></div>
+        <input requiredmessage="Заполните поле пароля" placeholder="Введите пароль" type="password"
+               minlength="8"
+               maxLength="20"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               name="password" [(ngModel)]="user.password" required #password="ngModel">
+      </div>
+      <div [style.color]="'red'" *ngIf="!password?.valid
+                && (password?.dirty || password?.touched)">
+        Неверно указан Пароль
+        <div *ngIf="password?.errors?.required">
+          Поле Пароль должен быть заполнен
+        </div>
+        <div *ngIf="password?.errors?.minlength">
+          Минимальная длина пароля {{password?.errors?.minlength?.requiredLength}}
+        </div>
+        <div *ngIf="password?.errors?.pattern">
+          Пароль должен содержать как минимум одну цифру, одну заглавную и строчную букву и как минимум 8 или более символов.
+        </div>
+      </div>
     </div>
     <div class="in-field">
       <label>Повторите пароль*</label>
       <div>
-        <input requiredmessage="Заполните поле повторного пароля" placeholder="Повторите пароль" type="password">
+        <input requiredmessage="Заполните поле повторного пароля" placeholder="Повторите пароль" type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required #confirmPass="ngModel">
+      </div>
+      <div [style.color]="'red'" *ngIf="!confirmPass?.valid
+                && (confirmPass?.dirty || confirmPass?.touched)">
+        Неверно указан Повторный Пароль
+        <div *ngIf="confirmPass?.errors?.required">
+          Поле Повторный Пароль должен быть заполнен
+        </div>
       </div>
     </div>
       <div class="in-field">
         <label>Телефон *</label>
-        <div><input requiredmessage="Заполните поле телефона" placeholder="8 (***) *******" prefix="8"
-                    mask="(000) 000-00-00">
+        <div><input requiredmessage="Заполните поле телефона"
+                    name="tel"
+                    placeholder="7(___)___-__-__"
+                    [(ngModel)]="user.tel"
+                    pattern="7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" required #tel="ngModel">
+        </div>
+        <div [style.color]="'red'" *ngIf="!tel?.valid
+                && (tel?.dirty || tel?.touched)">
+          Неверно указан Номер Телефона
+          <div *ngIf="tel?.errors?.required">
+            Поле Телефон должен быть заполнен
+          </div>
+          <div *ngIf="tel?.errors?.pattern">
+              Телефон должен быть в формате 7(___)___-__-__
+          </div>
         </div>
       </div>
       <p class="info"> Введите свой номер телефона. Науказанный номер будет отправлено SMS с кодом.</p>
