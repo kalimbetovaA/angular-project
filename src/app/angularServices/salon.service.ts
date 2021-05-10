@@ -16,7 +16,7 @@ export class SalonService {
     return this.http.get<Salon[]>(this.baseURL + `/salons`);
   }
 
-  getSalon(id: string | null): any {
+  getSalon(id: string | null): Observable<Salon> {
     return this.http.get<Salon>(this.baseURL + `/salons/${id}`);
   }
 

@@ -25,7 +25,7 @@ export class SignInComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.user = new User(1, '', '', ''),
+    this.user = new User(1, '', '', '', []),
 
     setTimeout(() => {
       this.userForm.setValue(this.user);

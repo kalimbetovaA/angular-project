@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
 import {User} from '../user';
@@ -8,7 +8,7 @@ import {User} from '../user';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent implements AfterViewInit, OnInit {
 
   @ViewChild('form') userForm!: NgForm;
   user!: User;
@@ -18,7 +18,7 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
     this.confirmPassword = '';
-    this.user = new User(1, '', '', ''),
+    this.user = new User(1, '', '', '', []),
 
       setTimeout(() => {
         this.userForm.setValue(this.user);
@@ -32,7 +32,15 @@ export class SignUpComponent implements OnInit {
   }
 
 
+
+
   onFormSubmit(): void {
     console.log(this.userForm.value);
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.userForm.setValue(this.user);
+    });
   }
 }

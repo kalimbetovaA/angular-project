@@ -1,4 +1,4 @@
 export class User {
-  constructor(public userId: number, public tel: string, public password: string, public username: string) {
+  constructor(public userId: number, public tel: string, public password: string, public username: string, public reservations: any[]) {
   }
 }

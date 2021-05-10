@@ -27,6 +27,7 @@ import {AuthGuardService} from "./guard/auth-guard.service";
 import {AuthService} from "./angularServices/auth.service";
 import { ReserveDataComponent } from './profile/reserve-data/reserve-data.component';
 import {HttpClientModule} from "@angular/common/http";
+import {MatchPasswordDirective} from "./validator/match-password.directive";
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {HttpClientModule} from "@angular/common/http";
     SignUpComponent,
     SignInComponent,
     ProfileComponent,
-    ReserveDataComponent
+    ReserveDataComponent,
+    MatchPasswordDirective
   ],
   imports: [
     BrowserModule,

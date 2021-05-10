@@ -24,41 +24,39 @@
         </div>
       </div>
     </div>
-    <div class="in-field">
-      <label>Пароль *</label>
-      <div>
-        <input requiredmessage="Заполните поле пароля" placeholder="Введите пароль" type="password"
-               minlength="8"
-               maxLength="20"
-               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-               name="password" [(ngModel)]="user.password" required #password="ngModel">
+    <div ngModelGroup="passwords" #passwords="ngModelGroup" appMatchPassword>
+      <div class="in-field">
+        <label>Пароль *</label>
+        <div>
+          <input requiredmessage="Заполните поле пароля" placeholder="Введите пароль" type="password"
+                 minlength="8"
+                 maxLength="20"
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                 name="password" [(ngModel)]="user.password" required #password="ngModel">
+        </div>
+        <div [style.color]="'red'" *ngIf="!password?.valid
+                  && (password?.dirty || password?.touched)">
+          Неверно указан Пароль
+          <div *ngIf="password?.errors?.required">
+            Поле Пароль должен быть заполнен
+          </div>
+          <div *ngIf="password?.errors?.minlength">
+            Минимальная длина пароля {{password?.errors?.minlength?.requiredLength}}
+          </div>
+          <div *ngIf="password?.errors?.pattern">
+            Пароль должен содержать как минимум одну цифру, одну заглавную и строчную букву и как минимум 8 или более символов.
+          </div>
+        </div>
       </div>
-      <div [style.color]="'red'" *ngIf="!password?.valid
-                && (password?.dirty || password?.touched)">
-        Неверно указан Пароль
-        <div *ngIf="password?.errors?.required">
-          Поле Пароль должен быть заполнен
+      <div class="in-field">
+        <label>Повторите пароль*</label>
+        <div>
+          <input requiredmessage="Заполните поле повторного пароля" placeholder="Повторите пароль" type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required #confirmPass="ngModel">
         </div>
-        <div *ngIf="password?.errors?.minlength">
-          Минимальная длина пароля {{password?.errors?.minlength?.requiredLength}}
+        <div [style.color]="'red'" *ngIf="passwords.errors?.passwordCheck && (confirmPass?.dirty || confirmPass?.touched)">
+          Пароли не совпадает
         </div>
-        <div *ngIf="password?.errors?.pattern">
-          Пароль должен содержать как минимум одну цифру, одну заглавную и строчную букву и как минимум 8 или более символов.
-        </div>
-      </div>
     </div>
-    <div class="in-field">
-      <label>Повторите пароль*</label>
-      <div>
-        <input requiredmessage="Заполните поле повторного пароля" placeholder="Повторите пароль" type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required #confirmPass="ngModel">
-      </div>
-      <div [style.color]="'red'" *ngIf="!confirmPass?.valid
-                && (confirmPass?.dirty || confirmPass?.touched)">
-        Неверно указан Повторный Пароль
-        <div *ngIf="confirmPass?.errors?.required">
-          Поле Повторный Пароль должен быть заполнен
-        </div>
-      </div>
     </div>
       <div class="in-field">
         <label>Телефон *</label>

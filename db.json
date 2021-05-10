@@ -4,7 +4,16 @@
       "userId": 1,
       "tel": "7(707)706-76-73",
       "password": "Araypass1",
-      "username": "Aray"
+      "username": "Aray",
+      "reservations": [
+        {
+        "date": "2021-05-10",
+        "time": "15:00",
+        "salonId": "3",
+        "totalCost": 5000,
+          "service": "Маникюр"
+      }
+      ]
     },
     {
       "userId": 2,
@@ -392,26 +401,31 @@
       "salonId": "1",
       "detailedServicesList": [
         {
+          "serviceId": "1",
           "name": "Ламинирование бровей",
           "price": 6000,
           "master": "Жулдыз"
         },
         {
+          "serviceId": "2",
           "name": "Наращивание ресниц",
           "price": 8000,
           "master": "Алина"
         },
         {
+          "serviceId": "3",
           "name": "Маникюр",
           "price": 5000,
           "master": "Юлия"
         },
         {
+          "serviceId": "4",
           "name": "Педикюр",
           "price": 7000,
           "master": "Юлия"
         },
         {
+          "serviceId": "5",
           "name": "Коррекция ресниц",
           "price": 5000,
           "master": "Асель"
@@ -422,21 +436,25 @@
       "salonId": "2",
       "detailedServicesList": [
         {
+          "serviceId": "1",
           "name": "Укладка",
           "price": 1000,
           "master": "Камиль"
         },
         {
+          "serviceId": "2",
           "name": "Стрижка мужская",
           "price": 5000,
           "master": "Темирлан"
         },
         {
+          "serviceId": "3",
           "name": "Коррекция бороды",
           "price": 2500,
           "master": "Рамир"
         },
         {
+          "serviceId": "4",
           "name": "Стрижка детская",
           "price": 3000,
           "master": "Сергей"
@@ -447,21 +465,25 @@
       "salonId": "3",
       "detailedServicesList": [
         {
+          "serviceId": "1",
           "name": "Ламинирование бровей",
           "price": 5000,
           "master": "Айдын"
         },
         {
+          "serviceId": "2",
           "name": "Наращивание ресниц",
           "price": 5000,
           "master": "Катерина"
         },
         {
+          "serviceId": "3",
           "name": "Маникюр",
           "price": 4000,
           "master": "Анель"
         },
         {
+          "serviceId": "4",
           "name": "Педикюр",
           "price": 6000,
           "master": "Ирина"
@@ -472,21 +494,25 @@
       "salonId": "4",
       "detailedServicesList": [
         {
+          "serviceId": "1",
           "name": "Наращивание ресниц",
           "price": 9000,
           "master": "Альбина"
         },
         {
+          "serviceId": "2",
           "name": "Маникюр + гель покрытие + снятие",
           "price": 7000,
           "master": "Ляззат"
         },
         {
+          "serviceId": "3",
           "name": "Педикюр",
           "price": 7000,
           "master": "Ирина"
         },
         {
+          "serviceId": "4",
           "name": "Коррекция ресниц",
           "price": 5000,
           "master": "Асель"
@@ -497,21 +523,25 @@
       "salonId": "5",
       "detailedServicesList": [
         {
+          "serviceId": "1",
           "name": "Ламинирование бровей",
           "price": 15000,
           "master": "Айдана"
         },
         {
+          "serviceId": "2",
           "name": "Коррекция бровей",
           "price": 5000,
           "master": "Айдын"
         },
         {
+          "serviceId": "3",
           "name": "Массаж лица",
           "price": 16000,
           "master": "Зарина"
         },
         {
+          "serviceId": "4",
           "name": "Face Fit",
           "price": 10000,
           "master": "Ирина"
@@ -522,21 +552,25 @@
       "salonId": "6",
       "detailedServicesList": [
         {
+          "serviceId": "1",
           "name": "Ламинирование бровей",
           "price": 9000,
           "master": "Асель"
         },
         {
+          "serviceId": "2",
           "name": "Укладка",
           "price": 16000,
           "master": "Зарина"
         },
         {
+          "serviceId": "3",
           "name": "Маникюр",
           "price": 4000,
           "master": "Анель"
         },
         {
+          "serviceId": "4",
           "name": "Педикюр",
           "price": 6000,
           "master": "Катерина"
@@ -547,21 +581,25 @@
       "salonId": "7",
       "detailedServicesList": [
         {
+          "serviceId": "1",
           "name": "Коррекция бровей",
           "price": 5000,
           "master": "Айгерим"
         },
         {
+          "serviceId": "2",
           "name": "Укладка",
           "price": 16000,
           "master": "Камила"
         },
         {
+          "serviceId": "3",
           "name": "Маникюр",
           "price": 5000,
           "master": "Аида"
         },
         {
+          "serviceId": "4",
           "name": "Педикюр",
           "price": 7500,
           "master": "Катерина"
@@ -572,21 +610,25 @@
       "salonId": "8",
       "detailedServicesList": [
         {
+          "serviceId": "1",
           "name": "Маникюр",
           "price": 4000,
           "master": "Анель"
         },
         {
+          "serviceId": "2",
           "name": "Ламинирование бровей",
           "price": 5000,
           "master": "Айдын"
         },
         {
+          "serviceId": "3",
           "name": "Наращивание ресниц",
           "price": 5000,
           "master": "Камила"
         },
         {
+          "serviceId": "4",
           "name": "Педикюр",
           "price": 6000,
           "master": "Айгерим"

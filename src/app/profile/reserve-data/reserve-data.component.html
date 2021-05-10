@@ -1,7 +1,9 @@
-<div>
-  <p>Дата: 10.05.2021</p>
-  <p>Время: 14:00</p>
-  <p>Салон: New Salon</p>
-  <p>Цена: 9000 тг</p>
-  <p>Услуга: Маникюр</p>
+<div class="salons"  *ngFor="let reservation of reservations!">
+  <div>
+    <p>Дата: {{reservation.date}}</p>
+    <p>Время: {{reservation.time}}</p>
+    <p>Салон: {{getSalon(reservation.salonId).salon}}</p>
+    <p>Цена: {{reservation.totalCost}} тг</p>
+    <p>Услуга: {{reservation.service}}</p>
+  </div>
 </div>
