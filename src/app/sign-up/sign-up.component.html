@@ -54,7 +54,7 @@
           <input requiredmessage="Заполните поле повторного пароля" placeholder="Повторите пароль" type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required #confirmPass="ngModel">
         </div>
         <div [style.color]="'red'" *ngIf="passwords.errors?.passwordCheck && (confirmPass?.dirty || confirmPass?.touched)">
-          Пароли не совпадает
+          Пароли не совпадают
         </div>
     </div>
     </div>

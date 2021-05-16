@@ -1,9 +1,9 @@
 <div class="salons"  *ngFor="let reservation of reservations!">
   <div>
-    <p>Дата: {{reservation.date}}</p>
-    <p>Время: {{reservation.time}}</p>
-    <p>Салон: {{getSalon(reservation.salonId).salon}}</p>
-    <p>Цена: {{reservation.totalCost}} тг</p>
-    <p>Услуга: {{reservation.service}}</p>
+    <p><b>Дата:</b> {{reservation.date}}</p>
+    <p><b>Время:</b> {{reservation.time}}</p>
+    <p><b>Салон:</b> {{reservation.salon}}</p>
+    <p><b>Цена:</b> {{reservation.totalCost}} тг</p>
+    <p><b>Услуга:</b> {{reservation.service}}</p>
   </div>
 </div>

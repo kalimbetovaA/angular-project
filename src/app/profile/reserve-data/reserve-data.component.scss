@@ -14,3 +14,19 @@ h2{
 .title{
   margin-bottom: 30px;
 }
+.salons div{
+  height: 200px;
+  float: left;
+  margin: 20px;
+  background: #ef7981;
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+.salons{
+  display: inline-block;
+}
+.salons div p{
+  border-bottom: 1px solid;
+}

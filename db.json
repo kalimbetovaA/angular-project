@@ -9,10 +9,17 @@
         {
         "date": "2021-05-10",
         "time": "15:00",
-        "salonId": "3",
+        "salon": "Chocolate",
         "totalCost": 5000,
           "service": "Маникюр"
-      }
+      },
+        {
+          "date": "2021-05-04",
+          "time": "18:00",
+          "salon": "Lilu",
+          "totalCost": 6000,
+          "service": "Ламинирование бровей"
+        }
       ]
     },
     {
